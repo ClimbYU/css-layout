@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>居中</title>
+        <style type="text/css">
+           div{
+               margin: 0;
+               padding: 0
+           }
+           html,
+           body{
+               height: 100%;
+           }
+           #div0{
+               margin: 0 auto;
+               width: 80%;
+               height: 90%;
+               background: #77ee33;
+               position: relative
+           }
+           #div1{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background: #2288ee;
+            margin-left: -100px;
+            margin-top: -100px;
+           }
+        </style>
+    </head>
+
+    <body>
+        <div id="div0">
+            <div id="div1">
+                让元素相对父元素定位，偏移左50%，上50%，把自身向左移半个宽度，向上移半个高度，同时完成了水平与垂直方向的居中
+            </div>
+        </div>
+    </body>
+
+</html>
