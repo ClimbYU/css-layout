@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>负边距</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #div1 {
+            height: 100px;
+            background: lightblue;
+            width: 100%;
+            float: left;
+        }
+
+        #div2 {
+            height: 100px;
+            background: lightgreen;
+            width: 30%;
+            float: left;
+            margin-left: -100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">div1
+        当多个元素同时从标准流中脱离开来时，如果前一个元素的宽度为100%宽度，后面的元素通过负边距可以实现上移。当负的边距超过自身的宽度将上移，只要没有超过自身宽度就不会上移
+    </div>
+    <div id="div2">div2
+    </div>
+</body>
+
+</html>
