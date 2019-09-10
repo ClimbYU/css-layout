@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>上下固定中间滚动</title>
+  <style>
+    body,
+    html {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .header {
+      height: 60px;
+      background-color: aquamarine
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      height: 100%;
+    }
+
+    .title {
+      height: 60px;
+      width: 100%;
+      background-color: bisque
+    }
+
+    .content {
+      flex: 1;
+      width: 100%;
+      background-color: aqua;
+      top: 60px;
+      overflow: auto;
+    }
+
+    .footer {
+      height: 100px;
+      background-color: blueviolet
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="header">Header</div>
+    <div class="container">
+      <div class="title">title</div>
+      <div class="content">
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>name</p>
+        <p>3456789</p>
+        <p>3245678</p>
+        <p>23456</p>
+      </div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+</body>
+
+</html>
