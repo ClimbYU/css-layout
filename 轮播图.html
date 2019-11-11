@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>轮播图</title>
+  <style>
+    .container {
+      width: 266px;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid hotpink;
+    }
+
+    .content {
+      position: absolute;
+      white-space: nowrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    .content>li {
+      display: inline-block;
+    }
+
+    li>img {
+      height: 200px;
+      background-size: contain;
+      position: relative;
+    }
+
+    li::before {
+      content: attr(index);
+      left: 0px;
+      width: 20px;
+      display: inline-block;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <ul class="content" id='content'>
+      <li index='1'>
+        <img src="./img/1.jpg">
+      </li>
+      <li index='2'><img src="./img/1.jpg"></li>
+      <li index='3'><img src="./img/1.jpg"></li>
+      <li index='4 '><img src="./img/1.jpg"></li>
+      <li index='5'><img src="./img/1.jpg"></li>
+    </ul>
+  </div>
+
+</body>
+<script>
+  var container = document.querySelector('.container')
+  var content = document.querySelector('#content')
+  var lastX = 0
+  var distance = 0
+  var startX = 0
+  container.addEventListener('touchstart', function (e) {
+    const touches = e.touches[0]
+    const { clientX } = touches
+    startX = clientX
+
+  })
+  container.addEventListener('touchmove', function (e) {
+    const touches = e.touches[0]
+    const { clientX } = touches
+
+
+    distance += (clientX - startX)
+    content.style.cssText = `transform:translateX(${distance}px)`
+    lastX = clientX - startX
+  })
+</script>
+
+</html>
