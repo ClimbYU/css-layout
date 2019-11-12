@@ -61,21 +61,20 @@
   var content = document.querySelector('#content')
   var lastX = 0
   var distance = 0
-  var startX = 0
-  container.addEventListener('touchstart', function (e) {
-    const touches = e.touches[0]
-    const { clientX } = touches
-    startX = clientX
-
-  })
   container.addEventListener('touchmove', function (e) {
     const touches = e.touches[0]
     const { clientX } = touches
 
+    if (lastX) {
 
-    distance += (clientX - startX)
-    content.style.cssText = `transform:translateX(${distance}px)`
-    lastX = clientX - startX
+      distance += (clientX - lastX)
+      content.style.cssText = `transform:translateX(${distance}px)`
+    }
+    lastX = clientX
+  })
+
+  container.addEventListener('touchend', function (e) {
+    lastX = 0
   })
 </script>
 
