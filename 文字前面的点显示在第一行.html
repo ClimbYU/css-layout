@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .first-line>li {
+      list-style: none;
+
+    }
+
+    .first-line>li>a {
+      display: inline-block;
+      width: 90%;
+
+    }
+
+    .first-line>li::before {
+      content: '.';
+      display: inline-block;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 15px;
+      color: gray;
+      vertical-align: top;
+      line-height: 13px;
+    }
+
+    .center-line>li {
+      list-style: none;
+      position: relative;
+
+    }
+
+    .center-line>li>a {
+      display: inline-block;
+      width: 90%;
+      margin-left: 15px;
+
+    }
+
+    .center-line>li::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background-color: gray;
+      position: absolute;
+      top: 50%
+    }
+  </style>
+</head>
+
+<body>
+  伪元素设置为display:inline-block
+  <ul class="first-line">
+    <li>
+      <a>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</a>
+    </li>
+    <li>
+      <a>测试测试测试</a>
+    </li>
+    <li><a>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</a></li>
+  </ul>
+  伪元素设置为display:block
+  <ul class="center-line">
+    <li>
+      <a>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</a>
+    </li>
+    <li>
+      <a>测试测试测试</a>
+    </li>
+    <li><a>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</a></li>
+  </ul>
+</body>
+
+</html>

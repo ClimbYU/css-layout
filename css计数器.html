@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css计数器</title>
+  <style>
+    .counter {
+      counter-reset: test 1 test2 2;
+      font-size: 32px;
+      font-family: Arial Black;
+      color: #cd0000;
+    }
+
+    .counter:before {
+      content: counter(test);
+    }
+
+    .counter1 {
+      counter-reset: wangxiaoer 2;
+      counter-increment: wangxiaoer;
+      font-size: 32px;
+      font-family: Arial black;
+      color: #cd0000;
+    }
+
+    .counter1:before {
+      content: counter(wangxiaoer);
+      counter-increment: wangxiaoer;
+    }
+
+    .count {
+      counter-reset: test1 10;
+    }
+
+    .count>li::before {
+      content: counter(test1);
+      counter-increment: test1 -1;
+    }
+
+    .counter2 {
+      counter-reset: test 1 test2 2;
+      font-size: 32px;
+      font-family: Arial Black;
+      color: #cd0000;
+    }
+
+    .counter2>li:nth-child(2n)::before {
+      content: counter(test2);
+    }
+
+    .counter2>li:nth-child(2n+1)::before {
+      content: counter(test);
+    }
+
+    .counter3 {
+      counter-reset: wangxiaoer 2 wangxiaosan 3;
+      font-size: 32px;
+      font-family: Arial black;
+      color: #cd0000;
+    }
+
+    .counter3:before {
+      content: counter(wangxiaoer) '\A'counter(wangxiaosan);
+      white-space: pre;
+    }
+
+    .reset {
+      padding-left: 20px;
+      counter-reset: test4;
+    }
+
+    .counter4::before {
+      content: counters(test4, '-');
+      counter-increment: test4;
+    }
+  </style>
+</head>
+
+<body>
+  counter-reset
+  <p>我叫王小二，字如其名，下面要出现的数字是：</p>
+  <p class="counter"></p>
+  <p class="counter1"></p>
+
+
+
+
+  <ul class="count">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+
+  <ul class="counter2">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <p class="counter3"></p>
+
+  <!-- 嵌套 -->
+  <div class="reset">
+    <div class="counter4">我是王小二
+      <div class="reset">
+        <div class="counter4">我是王小二的大儿子</div>
+        <div class="counter4">我是王小二的二儿子
+          <div class="reset">
+            <div class="counter4">我是王小二的二儿子的大孙子</div>
+            <div class="counter4">我是王小二的二儿子的二孙子</div>
+            <div class="counter4">我是王小二的二儿子的小孙子</div>
+          </div>
+        </div>
+        <div class="counter4">我是王小二的三儿子</div>
+      </div>
+    </div>
+    <div class="counter4">我是王小三</div>
+    <div class="counter4">我是王小四
+      <div class="reset">
+        <div class="counter4">我是王小四的大儿子</div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
