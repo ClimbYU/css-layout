@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Padding</title>
+  <style>
+    body,
+    html,
+    ul,
+    li {
+      padding: 0;
+      margin: 0;
+    }
+
+    .box {
+      overflow: hidden;
+    }
+
+    .full {
+      width: 100%;
+      float: left;
+    }
+
+    .box>img {
+      width: 100px;
+      height: 100px;
+      float: left;
+      margin-left: -128px;
+    }
+
+    .full>p {
+      margin-right: 140px;
+    }
+
+    .ul {
+      background-color: aqua;
+      width: 340px;
+      height: 100px;
+    }
+
+    .ul>div>div {
+      float: left;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin-right: 20px;
+    }
+
+    .box {
+      margin-right: -20px;
+    }
+
+    .left {
+      background-color: aqua;
+      margin-bottom: -99px;
+      padding-bottom: 99px;
+      max-width: 100px;
+    }
+
+    .right {
+      background-color: burlywood;
+      margin-bottom: -99px;
+      padding-bottom: 99px;
+      max-width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    　 <div class="full">
+      　　 　<p>文字内容...</p>
+      　 </div>
+    　 <img src="img/1.jpg">
+  </div>
+  <div class="ul">
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div style="display: flex;overflow: hidden;">
+    <div class="left">
+      <p>3424234</p>
+      <p>3424234</p>
+    </div>
+    <div class="right">
+      right
+    </div>
+  </div>
+  <div>
+    <p>23454675erdwe</p>
+    <p>234r54tfser</p>
+  </div>
+  <div>
+    怎样阻止margin合并：
+    对于margin-top合并，可以进行如下操作（满足一个条件即可）：
+
+    父元素设置为块状格式化上下文元素；
+    父元素设置border-top值；
+    父元素设置padding-top值；
+    父元素和第一个子元素之间添加内联元素进行分隔。
+
+    对于margin-bottom合并，可以进行如下操作（满足一个条件即可）：
+
+    父元素设置为块状格式化上下文元素；
+    父元素设置border-bottom值；
+    父元素设置padding-bottom值；
+    父元素和最后一个子元素之间添加内联元素进行分隔；
+    父元素设置height、min-height或max-height
+  </div>
+  <div style="width: 300px;background-color: coral;">
+    <div style="width: 200px;margin-left: auto;background-color: cyan;">margin-auto实现右对齐</div>
+  </div>
+</body>
+
+</html>
